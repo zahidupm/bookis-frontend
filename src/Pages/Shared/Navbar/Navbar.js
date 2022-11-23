@@ -64,13 +64,13 @@ const Navbar = () => {
             </li>
             <li>
               {user?.uid ? (
-                <button className='bg-orange-300 hover:bg-orange-400 duration-200 px-6 py-2 text-white fw-semibold' onClick={() => signOut(auth)} >Sign Out</button> 
+                <button className='bg-[#040000] hover:bg-[#000000] rounded-full duration-200 px-6 py-2 text-white fw-semibold' onClick={() => signOut(auth)} >Sign Out</button> 
               ) : (
                 <NavLink       /*  */
                 to='/login'
                 aria-label='Sign In'
                 title='Sign In'
-                className={({isActive}) => isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-purple-500 py-2 px-6 text-white hover:text-deep-purple-accent-400' : 'font-medium tracking-wide transition-colors duration-200 bg-orange-300 hover:bg-orange-400 text-white px-6 py-2 hover:text-deep-purple-accent-400'}
+                className={({isActive}) => isActive ? 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-purple-500 py-2 px-6 text-white hover:text-deep-purple-accent-400' : 'font-medium tracking-wide transition-colors duration-200 bg-[#040000] rounded-full hover:bg-[#000000] text-white px-6 py-2 hover:text-deep-purple-accent-400'}
                 >
                   Sign In
                 </NavLink>
@@ -182,13 +182,13 @@ const Navbar = () => {
                       </li>
                       <li>
                         {user?.uid ? (
-                          <button className='bg-orange-300 hover:bg-orange-400 duration-200 px-6 py-2 text-white fw-semibold' onClick={() => signOut(auth)} >Sign Out</button>
+                          <button className='bg-orange-300 rounded-full hover:bg-orange-400 duration-200 px-6 py-2 text-white fw-semibold' onClick={() => signOut(auth)} >Sign Out</button>
                         ) : (
                           <NavLink
                           to='/login'       /*  */
                           aria-label='Sign In'
                           title='Sign In'
-                          className={({isActive}) => isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-purple-500 py-2 px-6 text-white hover:text-deep-purple-accent-400' : 'font-medium tracking-wide transition-colors duration-200 bg-orange-300 hover:bg-orange-400 text-white px-6 py-2 hover:text-deep-purple-accent-400'}
+                          className={({isActive}) => isActive ? 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-purple-500 py-2 px-6 text-white hover:text-deep-purple-accent-400' : 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-orange-300 hover:bg-orange-400 text-white px-6 py-2 hover:text-deep-purple-accent-400'}
                           >
                             Sign In
                           </NavLink>
