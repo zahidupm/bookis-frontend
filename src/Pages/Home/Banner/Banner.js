@@ -13,8 +13,7 @@ const Banner = () => {
                             <span>In One Place</span>
                         </h2>
                         <p className="text-base text-gray-700 md:text-lg">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                        We have more than 100k+ books in our library. <br /> Let's find your favourite one.
                         </p>
                     </div>
                     <div className="flex items-center sm:justify-center">
