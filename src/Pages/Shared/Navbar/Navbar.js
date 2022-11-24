@@ -37,12 +37,12 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to='/services'
-                aria-label='Services'
-                title='Services'
+                to='/categories'
+                aria-label='Categories'
+                title='Categories'
                 className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
               >
-                Services
+                Categories
               </NavLink>
             </li>
             <li>
@@ -155,12 +155,12 @@ const Navbar = () => {
                       </li>
                       <li>
                         <NavLink
-                          to='/services'
-                          aria-label='Services'
-                          title='Services'
+                          to='/categories'
+                          aria-label='Categories'
+                          title='Categories'
                           className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
                         >
-                          Services
+                          Categories
                         </NavLink>
                       </li>
                       <li>

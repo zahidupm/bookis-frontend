@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
+import CategoryLayout from "../layout/CategoryLayout";
 import Main from "../layout/Main";
 import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
+import Categories from "../Pages/Category/Categories/Categories";
 import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 
@@ -26,6 +28,16 @@ const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            }
+        ]
+    },
+    {
+        path: '/categories',
+        element: <CategoryLayout></CategoryLayout>,
+        children: [
+            {
+                path: '/categories',
+                element: <Categories></Categories>
             }
         ]
     }
