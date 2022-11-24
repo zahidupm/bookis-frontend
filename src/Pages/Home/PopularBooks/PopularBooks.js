@@ -14,8 +14,8 @@ const PopularBooks = () => {
       <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
         <div>
           <img
-            className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            className="object-end w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
+            src="https://cdn.pixabay.com/photo/2020/04/28/18/33/key-5105878__340.jpg"
             alt=""
           />
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
@@ -29,7 +29,7 @@ const PopularBooks = () => {
         <div>
           <img
             className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-            src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            src="https://cdn.pixabay.com/photo/2018/07/01/20/01/music-3510326__340.jpg"
             alt=""
           />
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
@@ -43,7 +43,7 @@ const PopularBooks = () => {
         <div>
           <img
             className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-            src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010__340.jpg"
             alt=""
           />
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
@@ -57,7 +57,7 @@ const PopularBooks = () => {
         <div>
           <img
             className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-            src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            src="https://cdn.pixabay.com/photo/2016/08/24/16/20/books-1617327__340.jpg"
             alt=""
           />
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
@@ -71,7 +71,7 @@ const PopularBooks = () => {
         <div>
           <img
             className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-            src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+            src="https://cdn.pixabay.com/photo/2016/03/27/18/31/book-1283468__340.jpg"
             alt=""
           />
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
@@ -85,11 +85,11 @@ const PopularBooks = () => {
         <div>
           <img
             className="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80"
-            src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            src="https://cdn.pixabay.com/photo/2021/01/27/07/19/baby-5953965__340.jpg"
             alt=""
           />
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
-            Organically grow
+            Babies Books
           </p>
           <p className="text-gray-700">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
