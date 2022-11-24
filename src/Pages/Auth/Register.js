@@ -136,18 +136,18 @@ const Register = () => {
                     <form onSubmit={handleSubmit} id="sign-up-form">
                         <div className="pm-form-group">
                             <label htmlFor="email" className="pm-form-label">Email</label>
-                            <input onChange={handleEmail} type="email" className="pm-form-control focus:border-orange-400" id="email" name="email" autoFocus="" autoComplete="off" autoCapitalize="none" spellCheck="true" required />
+                            <input onChange={handleEmail} type="email" className="pm-form-control focus:outline-orange-400" id="email" name="email" autoFocus="" autoComplete="off" autoCapitalize="none" spellCheck="true" required />
                             {errors.email && <p className="t-red error-message">{errors.email}</p>}
                         </div>
                         <div className="pm-form-group">
                             <label htmlFor="name" className="pm-form-label">Name</label>
-                            <input onChange={handleName} type="text" className="pm-form-control focus:border-orange-400" id="name" name="name" autoComplete="off" autoCapitalize="none" spellCheck="true" required />
+                            <input onChange={handleName} type="text" className="pm-form-control focus:outline-orange-400" id="name" name="name" autoComplete="off" autoCapitalize="none" spellCheck="true" required />
                         </div>
                         <div className="pm-form-group">
                             <label htmlFor="password" className="pm-form-label">Password
                             <span id="show-password" className="show-password">SHOW</span>
                             </label>
-                            <input onChange={handlePassword} type="password" className="pm-form-control focus:border-orange-400" id="password" name="password" required />
+                            <input onChange={handlePassword} type="password" className="pm-form-control focus:outline-orange-400" id="password" name="password" required />
                             {errors.password && <p className='t-red error-message'>{errors.password}</p>}
                         </div>
 

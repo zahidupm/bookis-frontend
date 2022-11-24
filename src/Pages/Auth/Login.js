@@ -121,14 +121,14 @@ const Login = () => {
                     <form onSubmit={handleSubmit} id="sign-up-form">
                         <div className="pm-form-group">
                             <label htmlFor="email" className="pm-form-label">Email</label>
-                            <input onChange={handleEmail} type="email" className="pm-form-control focus:border-orange-400" id="email" name="email" autoFocus="" autoComplete="off" autoCapitalize="none" spellCheck="true" />
+                            <input onChange={handleEmail} type="email" className="pm-form-control focus:outline-orange-400" id="email" name="email" autoFocus="" autoComplete="off" autoCapitalize="none" spellCheck="true" />
                             {errors.email && <p className="t-red error-message">{errors.email}</p>}
                         </div>
                         <div className="pm-form-group">
                             <label htmlFor="password" className="pm-form-label">Password
                             <span id="show-password" className="show-password">SHOW</span>
                             </label>
-                            <input onChange={handlePassword} type="password" className="pm-form-control focus:border-orange-400" id="password" name="password" />
+                            <input onChange={handlePassword} type="password" className="pm-form-control focus:outline-orange-400" id="password" name="password" />
                             {errors.password && <p className='t-red error-message'>{errors.password}</p>}
                         </div>
 
