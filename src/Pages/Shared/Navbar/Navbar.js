@@ -1,6 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Logo from '../../../assets/img/Library_Brown.ico';
 import { auth } from '../../../configs/firebase.config';
 
 const Navbar = () => {
@@ -17,6 +18,7 @@ const Navbar = () => {
             title='Bookis'
             className='inline-flex items-center'
           >
+            <img className='w-8' src={Logo} alt="" />
             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 t-white'>
               Bookis
             </span>
@@ -116,7 +118,7 @@ const Navbar = () => {
                         title='Bookis'
                         className='inline-flex items-center'
                       >
-                        <img src="" alt="" />
+                        <img className='w-8' src={Logo} alt="" />
                         <span className='t-white ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
                           Bookis
                         </span>
@@ -182,13 +184,13 @@ const Navbar = () => {
                       </li>
                       <li>
                         {user?.uid ? (
-                          <button className='bg-orange-300 rounded-full hover:bg-orange-400 duration-200 px-6 py-2 text-white fw-semibold' onClick={() => signOut(auth)} >Sign Out</button>
+                          <button className=' rounded-full bg-[#040000] hover:bg-[#000000] duration-200 px-6 py-2 text-white fw-semibold' onClick={() => signOut(auth)} >Sign Out</button>
                         ) : (
                           <NavLink
                           to='/login'       /*  */
                           aria-label='Sign In'
                           title='Sign In'
-                          className={({isActive}) => isActive ? 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-purple-500 py-2 px-6 text-white hover:text-deep-purple-accent-400' : 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-orange-300 hover:bg-orange-400 text-white px-6 py-2 hover:text-deep-purple-accent-400'}
+                          className={({isActive}) => isActive ? 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-purple-500 py-2 px-6 text-white hover:text-deep-purple-accent-400' : 'font-medium rounded-full tracking-wide transition-colors duration-200 bg-[#040000] hover:bg-[#000000] text-white px-6 py-2 hover:text-deep-purple-accent-400'}
                           >
                             Sign In
                           </NavLink>
