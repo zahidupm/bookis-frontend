@@ -1,11 +1,12 @@
 import { signOut } from 'firebase/auth';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../../assets/img/Library_Brown.ico';
 import { auth } from '../../../configs/firebase.config';
+import { AuthContext } from '../../../contexts/auth.context';
 
 const Navbar = () => {
-    const {user} = {};
+    const {user} = useContext(AuthContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (

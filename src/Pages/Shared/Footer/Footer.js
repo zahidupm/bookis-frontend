@@ -14,7 +14,7 @@ const Footer = () => {
           >
            <img className='w-8' src={Logo} alt="" />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+              Bookis
             </span>
           </a>
           <div className="mt-6 lg:max-w-sm">
