@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import RightSideNav from '../Pages/Category/RightSideNav/RightSideNav';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
 
@@ -15,7 +16,7 @@ const CategoryLayout = () => {
 
                 <div className='basic-1/4 left-side-category'>
                     {/* side bar */}
-                    {/* <LeftSideNav></LeftSideNav> */}
+                    <RightSideNav></RightSideNav>
                 </div>
 
             </div>
