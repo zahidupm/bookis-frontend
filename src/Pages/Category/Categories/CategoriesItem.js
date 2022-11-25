@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CategoriesItem = ({category, setTreatment}) => {
-    console.log(category);
+    // console.log(category);
     const {published_date, title, image_url, Seller, original_price, resale_price, years_of_use, location,} = category;
     return (
         <div>
-            <p>{category.length}</p>
             <div className="overflow-hidden transition-shadow duration-300 bg-white rounded">
                 <Link href="/" aria-label="Article">
                     <img
