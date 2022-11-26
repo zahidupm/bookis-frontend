@@ -83,7 +83,7 @@ const Register = () => {
         }
         updateUserProfile(profile)
         .then(() => {
-          
+          saveUser(userInfo.name, userInfo.email);
         })
         .catch(error => console.error(error))
       }  
@@ -130,8 +130,19 @@ const Register = () => {
       }
 
       // save user
-      const saveUser = (name, email, user, seller) => {
-        console.log(saveUser);
+      const saveUser = (name, email) => {
+        const user = {name, email}
+        fetch(`http://localhost:5000/users`, {
+          method: "POST",
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+        })
       }
 
 
