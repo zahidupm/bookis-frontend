@@ -47,22 +47,22 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to='/faq'
-                aria-label='FAQ'
-                title='FAQ'
-                className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
-              >
-                FAQ
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to='/blog'
                 aria-label='Blog'
                 title='Blog'
                 className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
               >
                 Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/dashboard'
+                aria-label='Dashboard'
+                title='Dashboard'
+                className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
+              >
+                Dashboard
               </NavLink>
             </li>
             <li>
@@ -175,12 +175,12 @@ const Navbar = () => {
                       </li>
                       <li>
                         <NavLink
-                          to='/blog'
-                          aria-label='Blog'
-                          title='Blog'
+                          to='/dashboard'
+                          aria-label='Dashboard'
+                          title='Dashboard'
                           className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
                         >
-                          Blog
+                          Dashboard
                         </NavLink>
                       </li>
                       <li>

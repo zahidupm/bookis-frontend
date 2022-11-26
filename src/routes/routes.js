@@ -1,12 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import CategoryLayout from "../layout/CategoryLayout";
+import DashboardLayout from "../layout/DashboardLayout";
 import Main from "../layout/Main";
 import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
 import Blog from "../Pages/Blog/Blog";
 import Categories from "../Pages/Category/Categories/Categories";
 import Home from "../Pages/Home/Home/Home";
+import MyOrders from "../Pages/MyOrders/MyOrders";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
     {
@@ -37,11 +40,30 @@ const routes = createBrowserRouter([
     },
     {
         path: '/categories',
-        element: <CategoryLayout></CategoryLayout>,
+        element: <PrivateRoute><CategoryLayout></CategoryLayout></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/categories',
-                element: <Categories></Categories>
+                element: <Categories></Categories>,
+            },
+            // {
+            //     path: '/category/:id',
+            //     element: <Category></Category>,
+            //     loader: ({params}) => {
+            //         return fetch(`http://localhost:5000/category/${params.id}`)
+            //     }
+            // }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <MyOrders></MyOrders>
             }
         ]
     }
