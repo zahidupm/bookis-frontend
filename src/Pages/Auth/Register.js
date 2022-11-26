@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { AuthContext } from '../../contexts/auth.context';
+import useToken from '../../hooks/useToken';
 import '../Auth/Auth.css';
 
 
@@ -9,6 +10,13 @@ const Register = () => {
     const {createUser, updateUserProfile, signInWithGithub, signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail);
+
+    if(token) {
+      swal({ title: "Registered successfully!",icon: "success", });
+      navigate('/login');
+    }
 
     const [userInfo, setUserInfo] = useState({
         email: "",
@@ -95,8 +103,6 @@ const Register = () => {
         .then(result => {
           const user = result.user;
           console.log(user);
-          swal({ title: "Registered successfully!",icon: "success", });
-          navigate('/login');
           handleUpdateUserProfile(userInfo.name);
         })
         .catch(error => {
@@ -142,10 +148,9 @@ const Register = () => {
         .then(res => res.json())
         .then(data => {
           console.log(data);
+          setCreatedUserEmail(email)
         })
       }
-
-
 
     return (
         <div>

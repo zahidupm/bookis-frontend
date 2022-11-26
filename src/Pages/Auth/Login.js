@@ -2,12 +2,15 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { AuthContext } from '../../contexts/auth.context';
+import useToken from '../../hooks/useToken';
 import '../Auth/Auth.css';
 
 const Login = () => {
     const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token] = useToken(loginUserEmail);
 
     const [userInfo, setUserInfo]= useState({
         email: "",
@@ -19,6 +22,11 @@ const Login = () => {
         password: "",
         general: ""
       })
+
+      if (token) {
+          swal({ title: "Sign In!",icon: "success", });
+          navigate(location?.state?.from?.pathname || '/');
+      }
     
       const handleEmail = (e) => {
         const email = e.target.value;
@@ -67,8 +75,7 @@ const Login = () => {
             email: user.email
           }
           console.log(currentUser);
-          swal({ title: "Sign In!",icon: "success", });
-          navigate(location?.state?.from?.pathname || '/');
+          setLoginUserEmail(userInfo.email);
 
         })
         .catch(error => {
