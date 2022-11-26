@@ -13,7 +13,9 @@ const Register = () => {
     const [userInfo, setUserInfo] = useState({
         email: "",
         name: "",
-        password: ""
+        password: "",
+        user: "",
+        seller: ""
     });
 
     const [errors, setErrors] = useState({
@@ -38,6 +40,18 @@ const Register = () => {
         const name = e.target.value;
         console.log(name);
         setUserInfo({...userInfo, name: e.target.value});
+    }
+
+    const handleUser = (e) => {
+      const user = e.target.value;
+      console.log(user);
+      setUserInfo({...userInfo, user: e.target.value});
+    }
+
+    const handleSeller = (e) => {
+      const seller = e.target.value;
+      console.log(seller);
+      setUserInfo({...userInfo, seller: e.target.value});
     }
 
     const handlePassword = (e) => {
@@ -68,14 +82,15 @@ const Register = () => {
           displayName: name,
         }
         updateUserProfile(profile)
-        .then(() => {})
+        .then(() => {
+          
+        })
         .catch(error => console.error(error))
       }  
 
       // handle form
     const handleSubmit = (e) => {
         e.preventDefault();
-
         createUser(userInfo.email, userInfo.password)
         .then(result => {
           const user = result.user;
@@ -114,6 +129,11 @@ const Register = () => {
         .catch(error => console.error(error))
       }
 
+      // save user
+      const saveUser = (name, email, user, seller) => {
+        console.log(saveUser);
+      }
+
 
 
     return (
@@ -149,6 +169,13 @@ const Register = () => {
                             </label>
                             <input onChange={handlePassword} type="password" className="pm-form-control focus:outline-orange-400" id="password" name="password" required />
                             {errors.password && <p className='t-red error-message'>{errors.password}</p>}
+                        </div>
+                        <div className="pm-form-group">
+                            <label htmlFor="select" className="pm-form-label">User Type</label>
+                            <select name="" id="">
+                              <option onClick={handleUser} name='user' value="user">User</option>
+                              <option onClick={handleSeller} name='seller' value="seller">seller</option>
+                            </select>
                         </div>
 
                         <p id="terms-and-privacy">By creating an account, I agree to the
