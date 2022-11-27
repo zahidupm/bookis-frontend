@@ -186,13 +186,13 @@ const Register = () => {
                             <input onChange={handlePassword} type="password" className="pm-form-control focus:outline-orange-400" id="password" name="password" required />
                             {errors.password && <p className='t-red error-message'>{errors.password}</p>}
                         </div>
-                        <div className="pm-form-group">
+                        {/* <div className="pm-form-group">
                             <label htmlFor="select" className="pm-form-label">User Type</label>
                             <select name="" id="">
                               <option onClick={handleUser} name='user' value="user">User</option>
                               <option onClick={handleSeller} name='seller' value="seller">seller</option>
                             </select>
-                        </div>
+                        </div> */}
 
                         <p id="terms-and-privacy">By creating an account, I agree to the
                             <Link to='' rel="noreferrer">Terms</Link>
