@@ -23,13 +23,13 @@ const UserType = () => {
     }
 
     const handleMakeUser = email => {
-        fetch(`http://localhost:5000/users/user?email=${user?.email}`, {
+        fetch(`http://localhost:5000/users/buyer?email=${user?.email}`, {
             method: 'PUT'
         })
         .then(res => res.json())
         .then(data => {
             if(data.modifiedCount > 0) {
-                swal({title: 'Make User Successful', icon: 'success'})
+                swal({title: 'Make buyer Successful', icon: 'success'})
                 console.log(data);
                 refetch();
                 navigate('/login');
@@ -53,7 +53,7 @@ const UserType = () => {
     }
 
     return (
-        <div>
+        <div className='items-center'>
             <h2 className='text-3xl mb-6'>Select Your User Type</h2>
             {/* {
                 users.map((user, i) => <ul key={i}>
@@ -66,8 +66,12 @@ const UserType = () => {
                 </ul>)
             } */}
 
-            <button onClick={handleMakeUser} className='bg-blue-400 hover:bg-blue-700 px-4 py-2 text-white rounded-sm'>User</button>
-            <button onClick={handleMakeSeller} className='bg-blue-400 hover:bg-blue-700 px-4 py-2 text-white rounded-sm'>Seller</button>
+            <div className='flex items-center '>
+                <button onClick={handleMakeUser} className='bg-blue-400 hover:bg-blue-700 px-4 py-2 text-white rounded-sm'>Buyer</button>
+                <button onClick={handleMakeSeller} className='bg-blue-400 hover:bg-blue-700 px-4 py-2 text-white rounded-sm'>Seller</button>
+            </div>
+
+            
         </div>
     );
 };

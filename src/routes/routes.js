@@ -11,6 +11,7 @@ import UserType from "../Pages/Dashboard/UserType/UserType";
 import Home from "../Pages/Home/Home/Home";
 import MyOrders from "../Pages/MyOrders/MyOrders";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
@@ -74,7 +75,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/dashboard/all_users',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             }
         ]
     }
