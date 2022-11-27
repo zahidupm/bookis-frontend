@@ -6,6 +6,7 @@ import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
 import Blog from "../Pages/Blog/Blog";
 import Categories from "../Pages/Category/Categories/Categories";
+import Category from "../Pages/Category/Category/Category";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import UserType from "../Pages/Dashboard/UserType/UserType";
 import Home from "../Pages/Home/Home/Home";
@@ -43,6 +44,11 @@ const routes = createBrowserRouter([
              {
                 path: '/user_type',
                 element: <UserType></UserType>
+            },
+            {
+                path: '/category/:id',
+                element: <Category></Category>,
+                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`) 
             }
         ]
     },
@@ -55,13 +61,6 @@ const routes = createBrowserRouter([
                 path: '/categories',
                 element: <Categories></Categories>,
             },
-            // {
-            //     path: '/category/:id',
-            //     element: <Category></Category>,
-            //     loader: ({params}) => {
-            //         return fetch(`http://localhost:5000/category/${params.id}`)
-            //     }
-            // }
         ]
     },
     {

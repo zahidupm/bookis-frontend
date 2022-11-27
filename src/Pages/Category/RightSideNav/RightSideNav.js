@@ -15,7 +15,7 @@ const RightSideNav = () => {
 
     return (
         <div>
-            <div className="flex flex-col h-full p-3 w-80 item-sidebar b-dark">
+            <div className="flex flex-col h-full p-3 w-80 item-sidebar b-dark bg-light-700">
             <div className="space-y-3">
                 <div className="flex items-center font-bold text-2xl">
                     <FaDungeon className="w-5 h-5 fill-current dark:text-gray-400"></FaDungeon>
@@ -23,6 +23,12 @@ const RightSideNav = () => {
                 </div>
                 <div className="flex-1">
                     <ul className="pt-2 pb-4 space-y-1 text-sm">
+                    <li className="rounded-sm">
+                                <NavLink rel="noopener noreferrer" to={`/categories`} className={({isActive}) => isActive ? 'flex items-center p-2 space-x-3 rounded-md font-medium tracking-wide text-[#4349f0] t-dark bg-[#eef4ff] transition-colors duration-200 hover:text-deep-purple-accent-400' : 'flex items-center p-2 space-x-3 rounded-md font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}>
+                                    <FaGraduationCap className="w-5 h-5 fill-current dark:text-gray-400"></FaGraduationCap>
+                                    <span className='text-xl'>All</span>
+                                </NavLink>
+                            </li>
                         {
                             categories?.map(category => 
                             // <p key={item.id}>

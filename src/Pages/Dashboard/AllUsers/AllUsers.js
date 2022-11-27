@@ -50,7 +50,7 @@ const AllUsers = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {   users.length &&
+                        {   users?.length &&
                             users?.map((user, i) => <tr key={i}>
                             <th>{i+1}</th>
                             <td>{user?.name}</td>
