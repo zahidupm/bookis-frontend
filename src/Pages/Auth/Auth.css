@@ -6,6 +6,20 @@
   margin: 0;
   z-index: 1;
 }
+.add-product .left-section {
+  display: none;
+}
+.add-category,
+.pm-main-sign-up {
+  max-height: 400px;
+}
+
+.add-product .pm-main-sign-up {
+  width: 392px;
+  /* text-align: center; */
+  padding-left: 0;
+}
+
 .pm-main-sign-up {
   position: relative;
   width: 784px;
