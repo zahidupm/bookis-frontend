@@ -6,6 +6,8 @@ import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
 import Blog from "../Pages/Blog/Blog";
 import Categories from "../Pages/Category/Categories/Categories";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import UserType from "../Pages/Dashboard/UserType/UserType";
 import Home from "../Pages/Home/Home/Home";
 import MyOrders from "../Pages/MyOrders/MyOrders";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
@@ -32,9 +34,14 @@ const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }, {
+            },
+             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+             {
+                path: '/user_type',
+                element: <UserType></UserType>
             }
         ]
     },
@@ -64,6 +71,10 @@ const routes = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <MyOrders></MyOrders>
+            },
+            {
+                path: '/dashboard/all_users',
+                element: <AllUsers></AllUsers>
             }
         ]
     }

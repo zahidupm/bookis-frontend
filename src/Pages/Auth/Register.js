@@ -15,7 +15,7 @@ const Register = () => {
 
     if(token) {
       swal({ title: "Registered successfully!",icon: "success", });
-      navigate('/login');
+      navigate('/user_type');
     }
 
     const [userInfo, setUserInfo] = useState({
