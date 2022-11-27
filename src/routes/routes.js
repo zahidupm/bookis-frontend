@@ -7,6 +7,7 @@ import Register from "../Pages/Auth/Register";
 import Blog from "../Pages/Blog/Blog";
 import Categories from "../Pages/Category/Categories/Categories";
 import Category from "../Pages/Category/Category/Category";
+import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import UserType from "../Pages/Dashboard/UserType/UserType";
 import Home from "../Pages/Home/Home/Home";
@@ -14,6 +15,7 @@ import MyOrders from "../Pages/MyOrders/MyOrders";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
+import SellerRoute from "./SellerRoute";
 
 const routes = createBrowserRouter([
     {
@@ -75,6 +77,10 @@ const routes = createBrowserRouter([
             {
                 path: '/dashboard/all_users',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            {
+                path: '/dashboard/add_product',
+                element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
             }
         ]
     }
