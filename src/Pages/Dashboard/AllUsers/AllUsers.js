@@ -44,6 +44,7 @@ const AllUsers = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Role</th>
                             <th>Admin</th>
                             <th>Delete</th>
                         </tr>
@@ -54,6 +55,7 @@ const AllUsers = () => {
                             <th>{i+1}</th>
                             <td>{user?.name}</td>
                             <td>{user?.email}</td>
+                            <td>{user?.role}</td>
                             <td>
                                 {
                                     user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className='bg-blue-400 hover:bg-blue-600 text-white px-4 py-2 rounded-sm'>Make Admin</button>
