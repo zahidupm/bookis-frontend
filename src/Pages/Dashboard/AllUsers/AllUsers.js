@@ -34,6 +34,22 @@ const AllUsers = () => {
         })
     }
 
+    const handleDelete = user => {
+        fetch(`http://localhost:5000/users/${user._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deletedCount > 0){
+                swal({title: `User deleted successfully`, icon: 'success'})
+                refetch();
+            }
+        })
+    }
+
     return (
         <div>
             <h2 className='text-3xl mb-6'>All Users</h2>
@@ -62,7 +78,7 @@ const AllUsers = () => {
                                 }
                             </td>
                             <td>
-                                <button className='bg-red-400 hover:bg-red-600 text-white px-4 py-2 rounded-sm'>Delete</button>
+                                <button onClick={() => handleDelete(user)} className='bg-red-400 hover:bg-red-600 text-white px-4 py-2 rounded-sm'>Delete</button>
                             </td>
                         </tr>)
                         }
