@@ -117,8 +117,9 @@ const Register = () => {
         .then(result => {
           const user = result.user;
           console.log(user);
+          saveUser(user.displayName, user.email);
           swal({ title: "Google Sign Up!",icon: "success", });
-          navigate(location?.state?.from?.pathname || '/');
+          navigate('/user_type');
         })
         .catch(error => console.error(error))
       }

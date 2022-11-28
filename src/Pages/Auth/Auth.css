@@ -14,6 +14,10 @@
   max-height: 400px;
 }
 
+.add-product .pm-container-fluid {
+  min-height: 1400px;
+}
+
 .add-product .pm-main-sign-up {
   width: 392px;
   /* text-align: center; */

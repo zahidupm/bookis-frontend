@@ -54,7 +54,7 @@ const UserType = () => {
 
     return (
         <div className='items-center'>
-            <h2 className='text-3xl mb-6'>Select Your User Type</h2>
+            <h2 className='text-3xl mb-6 text-center'>Select Your User Type</h2>
             {/* {
                 users.map((user, i) => <ul key={i}>
                     <li>
@@ -66,7 +66,7 @@ const UserType = () => {
                 </ul>)
             } */}
 
-            <div className='flex items-center '>
+            <div className='flex items-center justify-center gap-4'>
                 <button onClick={handleMakeUser} className='bg-blue-400 hover:bg-blue-700 px-4 py-2 text-white rounded-sm'>Buyer</button>
                 <button onClick={handleMakeSeller} className='bg-blue-400 hover:bg-blue-700 px-4 py-2 text-white rounded-sm'>Seller</button>
             </div>

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { AuthContext } from '../contexts/auth.context';
 import useAdmin from '../hooks/useAdmin';
+import useBuyer from '../hooks/useBuyer';
 import useSeller from '../hooks/useSeller';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
@@ -10,6 +11,7 @@ const DashboardLayout = () => {
     const {user} = useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email);
     const [isSeller] = useSeller(user?.email);
+    const [isBuyer] = useBuyer(user?.email);
     return (
         <div>
             <Navbar></Navbar>
@@ -38,16 +40,21 @@ const DashboardLayout = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
                     <ul className="menu p-4 w-80 text-base-content bg-[#DCE2CB]">
                     
-                    <li><Link to='/dashboard'>My Orders</Link></li>
                     {
                         isAdmin && <>
-                            <li><Link to='/dashboard/all_users'>All Users</Link></li>
+                            <li><NavLink to='/dashboard/all_users'>All Users</NavLink></li>
                             {/* <li><Link to='/dashboard/add_product'>Add A Product</Link></li> */}
                         </>
                     }
                     {
                         isSeller && <>
-                            <li><Link to='/dashboard/add_product'>Add A Product</Link></li>
+                            <li><NavLink to='/dashboard/add_product'>Add A Product</NavLink></li>
+                            <li><NavLink to='/dashboard/my_products'>My Products</NavLink></li>
+                        </>
+                    }
+                    {
+                        isBuyer && <>
+                            <li><NavLink to='/dashboard/my_orders'>My Orders</NavLink></li>
                         </>
                     }
                     </ul>
