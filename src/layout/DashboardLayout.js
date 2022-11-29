@@ -43,7 +43,7 @@ const DashboardLayout = () => {
                     {
                         isAdmin && <>
                             <li><NavLink to='/dashboard/all_users'>All Users</NavLink></li>
-                            {/* <li><Link to='/dashboard/add_product'>Add A Product</Link></li> */}
+                            <li><NavLink to='/dashboard/all_sellers'>All Sellers</NavLink></li>
                         </>
                     }
                     {

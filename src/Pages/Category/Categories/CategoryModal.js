@@ -74,7 +74,7 @@ const CategoryModal = ({treatment, setTreatment}) => {
                         <label htmlFor="location" className="text-sm">Location</label>
                         <input name='location' id="location" type="text" className="w-full p-3 rounded dark:bg-gray-300" />
                     </div>
-                    <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-black text-white">Send Message</button>
+                    <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-black text-white">Book</button>
                 </form>
                 <div className="modal-action">
                 <label htmlFor="category-modal" className="bg-blue-400 hover:bg-blue-700 py-2 px-4 rounded-sm bold text-white">Close!</label>
