@@ -10,9 +10,12 @@ const Home = () => {
             <Banner></Banner>
             <PopularBooks></PopularBooks>
             <Addverites></Addverites>
-            <Secondhand></Secondhand>
+            <Secondhand></Secondhand> 
         </div>
     );
 };
 
 export default Home;
+
+ 
+ /*h/ttps://bookis.vercel.app/  */

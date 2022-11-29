@@ -12,6 +12,7 @@ import AllSellers from "../Pages/Dashboard/AllSellers/AllSellers";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import MyProducts from "../Pages/Dashboard/MyProducts/MyProducts";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 import UserType from "../Pages/Dashboard/UserType/UserType";
 import Home from "../Pages/Home/Home/Home";
 import MyOrders from "../Pages/MyOrders/MyOrders";
@@ -81,6 +82,11 @@ const routes = createBrowserRouter([
             {
                 path: '/dashboard/my_orders',
                 element: <BuyerRoute><MyOrders></MyOrders></BuyerRoute>
+            },
+            {
+                path: '/dashboard/payment/:id',
+                element: <BuyerRoute><Payment></Payment></BuyerRoute>,
+                loader: ({params}) => fetch(`https://bookis.vercel.app/bookings/${params.id}`)
             },
             {
                 path: '/dashboard/all_users',
