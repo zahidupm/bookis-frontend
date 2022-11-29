@@ -15,7 +15,7 @@ const AddProduct = () => {
     const {data: categories, isLoading} = useQuery({
         queryKey: ['category'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/categoryName`);
+            const res = await fetch(`https://bookis.vercel.app/categoryName`);
             const data = await res.json();
             return data;
         }
@@ -35,7 +35,7 @@ const AddProduct = () => {
             category_name
         }
         // console.log(category);
-        fetch(`http://localhost:5000/categoryName`, {
+        fetch(`https://bookis.vercel.app/categoryName`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -96,7 +96,7 @@ const AddProduct = () => {
         // })
 
         //save product database
-        fetch('http://localhost:5000/categories', {
+        fetch('https://bookis.vercel.app/categories', {
             method: "POST",
             headers: {
                 'content-type': 'application/json',

@@ -12,7 +12,7 @@ const UserType = () => {
     const {data: users = [], isLoading, refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/users`)
+            const res = await fetch(`https://bookis.vercel.app/users`)
             const data = await res.json()
             return data;
         }
@@ -23,7 +23,7 @@ const UserType = () => {
     }
 
     const handleMakeUser = email => {
-        fetch(`http://localhost:5000/users/buyer?email=${user?.email}`, {
+        fetch(`https://bookis.vercel.app/users/buyer?email=${user?.email}`, {
             method: 'PUT'
         })
         .then(res => res.json())
@@ -38,7 +38,7 @@ const UserType = () => {
     }
 
     const handleMakeSeller = email => {
-        fetch(`http://localhost:5000/users/seller?email=${user?.email}`, {
+        fetch(`https://bookis.vercel.app/users/seller?email=${user?.email}`, {
             method: 'PUT'
         })
         .then(res => res.json())

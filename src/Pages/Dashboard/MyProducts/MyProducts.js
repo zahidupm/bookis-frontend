@@ -13,7 +13,7 @@ const MyProducts = () => {
         setDeletingProduct(null);
     }
 
-    const url = `http://localhost:5000/categories/my_products?email=${user?.email}`;
+    const url = `https://bookis.vercel.app/categories/my_products?email=${user?.email}`;
     const {data: categories = [], isLoading, refetch} = useQuery({
         queryKey: ['categories', user?.email],
         queryFn: async () => {
@@ -28,7 +28,7 @@ const MyProducts = () => {
     })
 
     const handleDelete = category => {
-        fetch(`http://localhost:5000/categories/${category._id}`, {
+        fetch(`https://bookis.vercel.app/categories/${category._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

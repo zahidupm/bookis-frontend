@@ -11,7 +11,7 @@ const Category = () => {
     const categories = useLoaderData();
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/category/${id}`)
+    //     fetch(`https://bookis.vercel.app/category/${id}`)
     //     .then(res => res.json())
     //     .then(data => setCategories(data))
     // }, [])

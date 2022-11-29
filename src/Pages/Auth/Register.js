@@ -139,7 +139,7 @@ const Register = () => {
       // save user
       const saveUser = (name, email) => {
         const user = {name, email}
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://bookis.vercel.app/users`, {
           method: "POST",
           headers: {
             'content-type': 'application/json'

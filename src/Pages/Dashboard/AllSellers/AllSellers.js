@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 import Loading from '../../Shared/Loading/Loading';
 
 const AllSellers = () => {
-    const url = `http://localhost:5000/users/all_sellers`;
+    const url = `https://bookis.vercel.app/users/all_sellers`;
     const {data: sellers = [], isLoading, refetch} = useQuery({
         queryKey: ['sellers'],
         queryFn: async () => {
@@ -19,7 +19,7 @@ const AllSellers = () => {
     }
 
     const handleMakeVerified = id => {
-        fetch(`http://localhost:5000/users/verified/${id}`, {
+        fetch(`https://bookis.vercel.app/users/verified/${id}`, {
             method: 'PUT', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const AllSellers = () => {
     }
 
     const handleDelete = user => {
-        fetch(`http://localhost:5000/users/${user._id}`, {
+        fetch(`https://bookis.vercel.app/users/${user._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

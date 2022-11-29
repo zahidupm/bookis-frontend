@@ -25,7 +25,7 @@ const CategoryModal = ({treatment, setTreatment}) => {
             location
         }
         
-        fetch(`http://localhost:5000/bookings`, {
+        fetch(`https://bookis.vercel.app/bookings`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
