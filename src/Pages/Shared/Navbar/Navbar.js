@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../../assets/img/Library_Brown.ico';
 import { auth } from '../../../configs/firebase.config';
 import { AuthContext } from '../../../contexts/auth.context';
+import RightSideNav from '../../Category/RightSideNav/RightSideNav';
 
 const Navbar = () => {
     const {user} = useContext(AuthContext)
@@ -109,7 +110,7 @@ const Navbar = () => {
               </svg>
             </button>
             {isMenuOpen && (
-              <div className='absolute top-0 left-0 w-full learning-menu z-9'>
+              <div className='absolute top-0 left-0 w-full learning-menu z-10'>
                 <div className='p-5 bg-white border rounded shadow-sm'>
                   <div className='flex items-center justify-between mb-4'>
                     <div>
@@ -165,12 +166,12 @@ const Navbar = () => {
                       </li>
                       <li>
                         <NavLink
-                          to='/faq'
-                          aria-label='FAQ'
-                          title='FAQ'
+                          to='/blog'
+                          aria-label='Blog'
+                          title='Blog'
                           className={({isActive}) => isActive ? ' dark-active font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'}
                         >
-                          FAQ
+                          Blog
                         </NavLink>
                       </li>
                       <li>
@@ -204,6 +205,9 @@ const Navbar = () => {
                           title={user?.displayName} className="user-img rounded-full" data-v-71039168="" src={user?.photoURL ? user?.photoURL : "//www.gravatar.com/avatar/e136cff7d5ecea56b848a9b6bd0b2b1d?s=30&amp;d=retro&amp;r=g"} alt="Avatar"></img> </div> : ''}
                       </li>
                     </ul>
+                    <div className='mt-4 menu-right-nav'>
+                      <RightSideNav></RightSideNav>
+                    </div>
                   </nav>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import '../../../index.css';
 import Loading from '../../Shared/Loading/Loading';
 import CategoriesItem from '../Categories/CategoriesItem';
 import RightSideNav from '../RightSideNav/RightSideNav';
@@ -35,7 +36,7 @@ const Category = () => {
                 </div>
             </div>
             </div>
-            <div className='w-1/4'>
+            <div className='w-1/4 category-right-nav'>
                 <RightSideNav></RightSideNav>
             </div>
         </div>
