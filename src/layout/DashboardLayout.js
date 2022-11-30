@@ -44,12 +44,14 @@ const DashboardLayout = () => {
                         isAdmin && <>
                             <li><NavLink to='/dashboard/all_users'>All Users</NavLink></li>
                             <li><NavLink to='/dashboard/all_sellers'>All Sellers</NavLink></li>
+                            <li><NavLink to='/dashboard/reported_items'>Reported Items</NavLink></li>
                         </>
                     }
                     {
                         isSeller && <>
                             <li><NavLink to='/dashboard/add_product'>Add A Product</NavLink></li>
                             <li><NavLink to='/dashboard/my_products'>My Products</NavLink></li>
+                            <li><NavLink to='/dashboard/my_buyers'>My Buyers</NavLink></li>
                         </>
                     }
                     {
