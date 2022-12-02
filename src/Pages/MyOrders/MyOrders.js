@@ -43,7 +43,7 @@ const MyOrders = () => {
                         {
                             bookings?.map((booking, i) => <tr key={i}>
                             <th>{i+1}</th>
-                            <td>{booking?.image}</td>
+                            <td><img className='w-20 h-20' src={booking?.image_url} alt="" /></td>
                             <td>{booking?.title}</td>
                             <td>{booking?.price}</td>
                             <td>

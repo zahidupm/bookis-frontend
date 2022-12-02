@@ -4,7 +4,7 @@ import { AuthContext } from '../../../contexts/auth.context';
 
 const CategoryModal = ({treatment, setTreatment}) => {
     const {user} = useContext(AuthContext);
-    const {title, resale_price} = treatment;
+    const {title, resale_price, image_url} = treatment;
     console.log(treatment.resale_price);
 
     const handleSubmit = (e) => {
@@ -13,6 +13,7 @@ const CategoryModal = ({treatment, setTreatment}) => {
         const title = form.title.value;
         const name = form.name.value;
         const email = form.email.value;
+        const image_url = form.image_url.value;
         const phone = form.phone.value;
         const price = form.price.value;
         const location = form.location.value;
@@ -20,6 +21,7 @@ const CategoryModal = ({treatment, setTreatment}) => {
             title,
             buyer: name,
             email,
+            image_url,
             phone,
             price,
             location
@@ -61,6 +63,10 @@ const CategoryModal = ({treatment, setTreatment}) => {
                     <div>
                         <label htmlFor="email" className="text-sm">Email</label>
                         <input name='email' id="email" defaultValue={user?.email} readOnly type="email" className="w-full p-3 rounded dark:bg-gray-300" />
+                    </div>
+                    <div>
+                        <label htmlFor="image_url" className="text-sm">Image URL</label>
+                        <input name='image_url' id="image_url" value={image_url} readOnly type="text" className="w-full p-3 rounded dark:bg-gray-300" />
                     </div>
                     <div>
                         <label htmlFor="price" className="text-sm">Price</label>

@@ -1,0 +1,23 @@
+[debug] [2022-12-02T06:33:40.297Z] ----------------------------------------------------------------------
+[debug] [2022-12-02T06:33:40.302Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-02T06:33:40.303Z] CLI Version:   11.16.0
+[debug] [2022-12-02T06:33:40.303Z] Platform:      win32
+[debug] [2022-12-02T06:33:40.303Z] Node Version:  v16.15.1
+[debug] [2022-12-02T06:33:40.399Z] Time:          Fri Dec 02 2022 12:33:40 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-02T06:33:40.401Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-02T06:33:40.629Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-02T06:33:40.630Z] > authorizing via signed-in user (zahidhasan.limon121@gmail.com)
+[debug] [2022-12-02T06:33:40.630Z] [iam] checking project books-world-e44b0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-02T06:33:40.634Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-world-e44b0:testIamPermissions [none]
+[debug] [2022-12-02T06:33:40.634Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-world-e44b0:testIamPermissions x-goog-quota-user=projects/books-world-e44b0
+[debug] [2022-12-02T06:33:40.635Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-world-e44b0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-02T06:33:42.754Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-world-e44b0:testIamPermissions 200
+[debug] [2022-12-02T06:33:42.754Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-world-e44b0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-02T06:33:42.758Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/books-world-e44b0 [none]
+[debug] [2022-12-02T06:34:03.856Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/books-world-e44b0
+[debug] [2022-12-02T06:34:04.110Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/books-world-e44b0
+    at RetryOperation._fn (C:\Users\hi\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project books-world-e44b0. Please make sure the project exists and your account has permission to access it.
